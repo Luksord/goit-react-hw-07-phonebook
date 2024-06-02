@@ -3,6 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://6651122d20f4f4c44276e0f2.mockapi.io/contacts';
 //https://6651122d20f4f4c44276e0f2.mockapi.io/contacts/:endpoint
+
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
   async (_, thunkAPI) => {
@@ -84,30 +85,5 @@ export const deleteContact = createAsyncThunk(
 //     }
 //   }
 // );
-
-// =======================================================================================
-
-// import axios from "axios";
-// import {
-//   fetchingInProgress,
-//   fetchingSuccess,
-//   fetchingError,
-// } from "./tasksSlice";
-
-// axios.defaults.baseURL = "https://62584f320c918296a49543e7.mockapi.io";
-
-// export const fetchTasks = () => async dispatch => {
-//   try {
-//     // Wskaźnik ładowania
-//     dispatch(fetchingInProgress());
-//     // HTTP-request
-//     const response = await axios.get("/tasks");
-//     // Opracowywanie danych
-//     dispatch(fetchingSuccess(response.data));
-//   } catch (e) {
-//     // Opracowywanie błędu
-//     dispatch(fetchingError(e.message));
-//   }
-// };
 
 // =======================================================================================
